@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Michael Gomez Portfolio</title>
+<meta name="description" content="Michael Gomez: web experience and growth marketing. Audience-specific websites, conversion paths, SEO, accessibility and measurement, built with AI-assisted workflows.">
+<meta name="author" content="Michael Gomez">
+<meta property="og:title" content="Michael Gomez · Web Experience & Growth Marketing">
+<meta property="og:description" content="Audience-specific web journeys, built and measured. Portfolio of websites, conversion paths and measurement systems.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/sheraton-overview.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23131819%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Arial,sans-serif%27 font-weight=%27800%27 font-size=%2714%27 fill=%27%23f07a45%27 text-anchor=%27middle%27%3EMG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Michael Gomez",
+  "jobTitle": "Web Experience & Growth Marketing",
+  "email": "mailto:mgome028@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of California, Riverside" },
+  "sameAs": ["https://www.linkedin.com/in/mgome028", "https://github.com/syb-code", "https://www.doubledrook.com/"]
+}
+</script>
+<style>
+/* Layout: one 1120px column. Hero splits text and portrait; case studies alternate screenshot and copy, each with a "journey" strip; experience is a dated ledger; fit is a requirement-to-evidence table. */
+:root {
+  --paper: #f1f3f2;
+  --panel: #e5e9e7;
+  --ink: #131819;
+  --muted: #55605e;
+  --line: #cbd2cf;
+  --accent: #b9471a;
+  --accent-soft: #f3dfd4;
+  --on-accent: #ffffff;
+  --shot-edge: #b8c1be;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.1875rem;
+  --step-2: 1.5rem;
+  --step-3: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
+  --step-4: clamp(2.25rem, 1.4rem + 3.6vw, 4.25rem);
+
+  --wrap: 70rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1314;
+    --panel: #171d1f;
+    --ink: #e3e8e6;
+    --muted: #98a4a1;
+    --line: #2b3436;
+    --accent: #f07a45;
+    --accent-soft: #3a2117;
+    --on-accent: #1a0d07;
+    --shot-edge: #344042;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1314;
+  --panel: #171d1f;
+  --ink: #e3e8e6;
+  --muted: #98a4a1;
+  --line: #2b3436;
+  --accent: #f07a45;
+  --accent-soft: #3a2117;
+  --on-accent: #1a0d07;
+  --shot-edge: #344042;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  padding-inline: var(--gutter);
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 0.2em; text-decoration-thickness: 1.5px; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: var(--wrap); margin-inline: auto; }
+
+.skip { position: absolute; left: -9999px; top: 0.5rem; background: var(--ink); color: var(--paper); padding: 0.5rem 0.875rem; z-index: 10; }
+.skip:focus { left: var(--gutter); }
+
+.label {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: var(--step-3); font-stretch: 112%; font-weight: 750; line-height: 1.08; }
+h3 { font-size: var(--step-2); font-stretch: 105%; font-weight: 700; line-height: 1.15; }
+p { margin: 0; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 5;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  margin-inline: calc(var(--gutter) * -1);
+  padding-inline: var(--gutter);
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; flex-wrap: wrap; }
+.mark { font-family: var(--display); font-weight: 800; font-stretch: 118%; text-decoration: none; letter-spacing: 0.01em; font-size: 1.0625rem; }
+.mark span { color: var(--accent); }
+.site-nav { display: flex; gap: clamp(0.875rem, 2.5vw, 1.75rem); flex-wrap: wrap; }
+.site-nav a { font-family: var(--mono); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; color: var(--muted); }
+.site-nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(2rem, 5vw, 3.5rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 18rem); gap: clamp(2rem, 5vw, 4rem); align-items: end; }
+.hero h1 {
+  font-size: var(--step-4);
+  font-stretch: 122%;
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+}
+.hero h1 em { font-style: normal; color: var(--accent); }
+.lede { font-size: var(--step-1); line-height: 1.55; max-width: 38em; margin-top: 1.5rem; color: var(--ink); }
+.lede + .lede { margin-top: 0.875rem; font-size: var(--step-0); color: var(--muted); }
+.prepared {
+  display: inline-flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; align-items: baseline;
+  margin-top: 1.75rem; padding: 0.625rem 0.875rem;
+  border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  font-family: var(--mono); font-size: var(--step--1); color: var(--muted);
+}
+.prepared strong { color: var(--ink); font-weight: 500; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--mono); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em;
+  padding: 0.75rem 1.125rem; border: 1px solid var(--ink); text-decoration: none; cursor: pointer;
+  background: transparent; color: var(--ink);
+}
+.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { color: var(--on-accent); filter: brightness(1.08); }
+.btn:hover { color: var(--accent); }
+.btn-primary:hover { color: var(--on-accent); }
+
+.portrait { margin: 0; }
+.portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(0.92); }
+.portrait figcaption { margin-top: 0.625rem; display: flex; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+
+.metrics {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line);
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+.metric { padding: 1.125rem 1rem 1.25rem 0; display: grid; gap: 0.375rem; align-content: start; }
+.metric + .metric { padding-left: 1rem; border-left: 1px solid var(--line); }
+.metric b { font-family: var(--display); font-stretch: 115%; font-weight: 750; font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.metric span { font-size: 0.875rem; color: var(--muted); line-height: 1.45; }
+
+/* Sections */
+section { padding-block: clamp(3rem, 7vw, 5.5rem); }
+.section-head { display: grid; gap: 0.75rem; max-width: 44rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
+.section-head p:not(.label) { color: var(--muted); font-size: var(--step-1); line-height: 1.5; }
+.rule { border: 0; border-top: 1px solid var(--line); margin: 0; }
+
+/* Case studies */
+.cases { display: grid; gap: clamp(3.5rem, 8vw, 6rem); }
+.case { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.case:nth-child(even) .case-media { order: 2; }
+.case-media { display: grid; gap: 0.75rem; min-width: 0; }
+.shot { margin: 0; border: 1px solid var(--shot-edge); background: var(--panel); }
+.shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.shot-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.75rem; }
+.shot-pair.phone { grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr); align-items: start; }
+.shot-pair.phone .shot:last-child img { aspect-ratio: 390 / 600; }
+.shot-pair .shot img { aspect-ratio: 16 / 11; }
+.shot-pair.phone .shot:first-child img { aspect-ratio: 16 / 11.6; }
+.shot-note { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
+
+.case-body { display: grid; gap: 1.125rem; min-width: 0; }
+.case-meta { display: flex; flex-wrap: wrap; gap: 0.375rem 1rem; }
+.status { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.125rem 0.5rem; border: 1px solid var(--line); color: var(--muted); }
+.status.live { border-color: var(--accent); color: var(--accent); }
+.case-body > p { color: var(--ink); }
+.case-body ul { margin: 0; padding-left: 1.125rem; display: grid; gap: 0.5rem; }
+.case-body li { padding-left: 0.25rem; }
+.case-body li::marker { color: var(--accent); }
+
+.journey { list-style: none; margin: 0; padding: 0.875rem 1rem; background: var(--panel); display: grid; gap: 0.625rem; }
+.journey-title { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.journey ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem; }
+.journey li { font-family: var(--mono); font-size: 0.8125rem; line-height: 1.35; display: inline-flex; align-items: center; gap: 0.375rem; }
+.journey li + li::before { content: "→"; color: var(--accent); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+.tags span { font-family: var(--mono); font-size: 0.75rem; padding: 0.1875rem 0.5rem; border: 1px solid var(--line); color: var(--muted); }
+.case-link { font-family: var(--mono); font-size: 0.875rem; font-weight: 500; }
+
+/* Also built */
+.also { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--ink); margin-top: clamp(3.5rem, 8vw, 5.5rem); }
+.also article { padding: 1.5rem 1.5rem 1.75rem 0; display: grid; gap: 0.625rem; align-content: start; border-bottom: 1px solid var(--line); min-width: 0; }
+.also article:nth-child(even) { padding-left: 1.5rem; padding-right: 0; border-left: 1px solid var(--line); }
+.also h3 { font-size: var(--step-1); font-stretch: 108%; }
+.also p { color: var(--muted); font-size: 0.9375rem; }
+.also-head { grid-column: 1 / -1; padding: 1rem 0 0.25rem; }
+
+/* AI systems */
+.ai-feature { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.ai-feature-body { display: grid; gap: 1.125rem; min-width: 0; }
+.ai-feature-body ul { margin: 0; padding-left: 1.125rem; display: grid; gap: 0.5rem; }
+.ai-feature-body li::marker { color: var(--accent); }
+.pipeline-wrap { background: var(--panel); padding: 1.25rem 1.25rem 0.5rem; display: grid; gap: 0.75rem; min-width: 0; }
+.pipeline { list-style: none; margin: 0; padding: 0; counter-reset: stage; }
+.pipeline li { counter-increment: stage; display: grid; grid-template-columns: 2rem 5.5rem minmax(0, 1fr); gap: 0.75rem; align-items: baseline; padding-block: 0.625rem; border-top: 1px solid var(--line); }
+.pipeline li::before { content: counter(stage, decimal-leading-zero); font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
+.pipeline b { font-family: var(--display); font-stretch: 108%; font-weight: 700; font-size: 0.9375rem; }
+.pipeline span { font-size: 0.875rem; color: var(--muted); line-height: 1.45; }
+.ai-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: clamp(2.5rem, 6vw, 4rem); border-top: 1px solid var(--ink); }
+.ai-grid article { padding: 1.25rem 1.5rem 1.75rem 0; display: grid; gap: 0.5rem; align-content: start; border-bottom: 1px solid var(--line); min-width: 0; }
+.ai-grid article:not(:nth-child(3n+1)) { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+.ai-grid h3 { font-size: var(--step-1); font-stretch: 108%; }
+.ai-grid p:not(.label) { color: var(--muted); font-size: 0.9375rem; }
+.stack { margin-top: 1.5rem; font-size: 0.9375rem; color: var(--ink); display: flex; flex-wrap: wrap; gap: 0.5rem 0.875rem; align-items: baseline; }
+
+/* Testimonials */
+.quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 3rem); }
+.quote { margin: 0; display: grid; gap: 1rem; align-content: start; padding-top: 1.25rem; border-top: 1px solid var(--ink); }
+.quote blockquote { margin: 0; font-size: var(--step-1); line-height: 1.5; }
+.quote blockquote p + p { margin-top: 0.75rem; }
+.quote figcaption { display: grid; gap: 0.125rem; }
+.quote figcaption strong { font-weight: 600; }
+.quote figcaption span { font-size: 0.875rem; color: var(--muted); }
+
+/* Process */
+.process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: step; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.process li { padding: 1.25rem 1.25rem 1.5rem 0; display: grid; gap: 0.5rem; align-content: start; counter-increment: step; min-width: 0; }
+.process li + li { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+.process li::before { content: counter(step, decimal-leading-zero); font-family: var(--mono); font-size: 0.8125rem; color: var(--accent); }
+.process h3 { font-size: var(--step-1); font-stretch: 108%; }
+.process p { color: var(--muted); font-size: 0.9375rem; }
+
+.audiences { margin-top: clamp(2.5rem, 6vw, 4rem); }
+.audiences-intro { display: grid; gap: 0.5rem; max-width: 44rem; margin-bottom: 1.25rem; }
+.audiences-intro p { color: var(--muted); }
+.table-scroll { overflow-x: auto; border-top: 1px solid var(--ink); }
+table { border-collapse: collapse; width: 100%; min-width: 40rem; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.875rem 1rem 0.875rem 0; border-bottom: 1px solid var(--line); }
+th { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+td:first-child { font-weight: 600; white-space: nowrap; padding-right: 1.5rem; }
+td { color: var(--ink); }
+td.muted { color: var(--muted); }
+
+/* Experience */
+.ledger { display: grid; border-top: 1px solid var(--ink); }
+.role { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 0.5rem 2.5rem; padding-block: 1.75rem; border-bottom: 1px solid var(--line); }
+.role-when { display: grid; gap: 0.25rem; align-content: start; }
+.role-when .dates { font-family: var(--mono); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+.role-what { display: grid; gap: 0.75rem; min-width: 0; }
+.role-what h3 { font-size: var(--step-2); }
+.role-what .title { font-family: var(--mono); font-size: 0.875rem; color: var(--accent); margin-top: -0.25rem; }
+.role-what ul { margin: 0; padding-left: 1.125rem; display: grid; gap: 0.4375rem; max-width: 46rem; }
+.role-what li::marker { color: var(--muted); }
+.edu { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+
+/* Fit */
+.fit td:first-child { white-space: normal; width: 34%; font-weight: 500; }
+.fit td:nth-child(2) { width: 66%; }
+.fit .tier { display: block; font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 400; margin-top: 0.25rem; }
+
+/* Toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem 2.5rem; margin-top: clamp(2.5rem, 6vw, 3.5rem); }
+.toolkit div { display: grid; gap: 0.5rem; align-content: start; min-width: 0; }
+.toolkit p { font-size: 0.9375rem; }
+
+/* Contact */
+.contact { border-top: 1px solid var(--ink); }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; align-items: end; }
+.contact h2 { font-size: var(--step-4); font-stretch: 122%; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+.contact-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.contact-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 0.875rem; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.contact-row a, .contact-row .val { font-family: var(--mono); font-size: 0.9375rem; user-select: all; word-break: break-all; }
+.copy { font-family: var(--mono); font-size: 0.75rem; padding: 0.3125rem 0.625rem; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.copy:hover { border-color: var(--accent); color: var(--accent); }
+
+.site-footer { padding-block: 2rem 2.5rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; }
+.site-footer p { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .portrait { max-width: 16rem; order: -1; }
+  .portrait img { aspect-ratio: 1 / 1; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .metric:nth-child(3) { padding-left: 0; border-left: 0; }
+  .metric:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .case, .ai-feature, .quotes { grid-template-columns: minmax(0, 1fr); }
+  .ai-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ai-grid article:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+  .ai-grid article:nth-child(even) { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+  .case:nth-child(even) .case-media { order: 0; }
+  .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process li:nth-child(3) { padding-left: 0; border-left: 0; }
+  .process li:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .toolkit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .role { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .site-nav { gap: 0.875rem; }
+  .metrics { grid-template-columns: minmax(0, 1fr); }
+  .metric, .metric + .metric { padding-left: 0; border-left: 0; }
+  .metric + .metric { border-top: 1px solid var(--line); }
+  .also, .ai-grid { grid-template-columns: minmax(0, 1fr); }
+  .ai-grid article:nth-child(even) { padding-left: 0; border-left: 0; }
+  .pipeline li { grid-template-columns: 1.75rem minmax(0, 1fr); }
+  .pipeline span { grid-column: 2; }
+  .also article, .also article:nth-child(even) { padding-left: 0; padding-right: 0; border-left: 0; }
+  .process { grid-template-columns: minmax(0, 1fr); }
+  .process li, .process li + li { padding-left: 0; border-left: 0; }
+  .process li + li { border-top: 1px solid var(--line); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .shot-pair { grid-template-columns: minmax(0, 1fr); }
+  .shot-pair.phone { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="mark" href="#top">Michael Gomez<span>.</span></a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#ai">AI systems</a>
+      <a href="#approach">Approach</a>
+      <a href="#experience">Experience</a>
+      <a href="#fit">Fit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="label">Web experience · Growth marketing · AI systems</p>
+        <h1 id="hero-title">Web journeys that take each audience to its <em>next step.</em></h1>
+        <p class="lede">I'm Michael Gomez. For more than ten years I've owned websites end to end: the content, the page structure, the UX, the SEO and analytics, and the agency and stakeholder work that keeps them moving.</p>
+        <p class="lede">I ran web growth for a 15+ hotel portfolio and built scaled measurement tooling and GenAI automations at Pinterest. Today I run Doubled Rook and MyHotelAuditor.com, where I ship audience-specific websites and the agents, workflows and scheduled automations that run most of the business.</p>
+        <p class="prepared"><span>Prepared for</span> <strong>Shield AI · Growth Marketing Manager, Web Experience (R6101)</strong></p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn" href="#fit">How I match the role</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="assets/img/michael-gomez.jpg" width="640" height="800" alt="Portrait of Michael Gomez">
+        <figcaption><span class="label">Michael Gomez</span><span class="label">San Diego</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="metrics" role="list">
+      <div class="metric" role="listitem"><b>+55%</b><span>YoY website-generated revenue across 5 independent hotels, $10M+ topline</span></div>
+      <div class="metric" role="listitem"><b>+24%</b><span>YoY lift in direct-website conversion rate</span></div>
+      <div class="metric" role="listitem"><b>70+</b><span>hotel website audits covering UX, Core Web Vitals, WCAG, SEO and GA4</span></div>
+      <div class="metric" role="listitem"><b>15+</b><span>hotel websites managed under Marriott, Hilton and IHG brand standards</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Selected work · 2026</p>
+      <h2 id="work-title">Sites built around who is visiting and what they need to do.</h2>
+      <p>Three recent builds. Each one started from the audiences, mapped the path each audience takes, and ended in one clear conversion.</p>
+    </div>
+
+    <div class="cases">
+
+      <article class="case" aria-labelledby="case-sp">
+        <div class="case-media">
+          <figure class="shot"><img src="assets/img/sheraton-overview.jpg" width="1440" height="900" loading="lazy" alt="Sheraton Park groups and events overview page: fireworks over the hotel, with navigation tabs for Meetings, Weddings, Sports Teams, Reunions and Tour and Crew"></figure>
+          <figure class="shot"><img src="assets/img/sheraton-meetings.jpg" width="1440" height="900" loading="lazy" alt="Meetings and Conventions page: ballroom set theater style, headline about being one block from the Convention Center, with Start an RFP and Capacity Chart buttons"></figure>
+          <p class="shot-note">Overview page and the Meetings &amp; Conventions page.</p>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="status">Concept build for hotel leadership</span><span class="label">Six pages</span></div>
+          <h3 id="case-sp">Groups &amp; events microsite, Sheraton Park Hotel at the Anaheim Resort</h3>
+          <p>A 490-room convention hotel sells to five very different group buyers. A meeting planner, a bride, a team travel coordinator, a reunion organizer and a touring production crew each need different proof before they send an RFP. I built a microsite that gives each of them a page of their own.</p>
+          <ul>
+            <li>Overview page plus five audience pages: Meetings &amp; Conventions, Weddings &amp; Celebrations, Sports Teams, Reunions, and Tour &amp; Crew.</li>
+            <li>Each page leads with that buyer's question, then answers it with the facts that buyer checks: capacity charts, a property fact sheet, walk-through media and FAQs.</li>
+            <li>Every page ends in the same RFP path to the sales team, so five journeys feed one pipeline.</li>
+            <li>Page titles, meta descriptions and structured data written per audience; kept out of search indexes while under review.</li>
+          </ul>
+          <div class="journey">
+            <span class="journey-title">Journey</span>
+            <ol>
+              <li>Group type</li>
+              <li>Its own landing page</li>
+              <li>Capacity chart &amp; space tour</li>
+              <li>RFP to sales</li>
+            </ol>
+          </div>
+          <div class="tags"><span>Audience personas</span><span>Information architecture</span><span>Content hierarchy</span><span>Conversion paths</span><span>Responsive build</span></div>
+        </div>
+      </article>
+
+      <article class="case" aria-labelledby="case-mha">
+        <div class="case-media">
+          <figure class="shot"><img src="assets/img/mha-home.jpg" width="1440" height="900" loading="lazy" alt="MyHotelAuditor landing page: headline Evidence-graded marketing and operational audits for hotels and resorts, with Run an Audit and See a sample report buttons"></figure>
+          <div class="shot-pair phone">
+            <figure class="shot"><img src="assets/img/mha-intake.jpg" width="1440" height="900" loading="lazy" alt="Guided intake, step one of eight: Need help finding the right report? with a step list from Getting started to Review"></figure>
+            <figure class="shot"><img src="assets/img/mha-mobile.jpg" width="780" height="1688" loading="lazy" alt="MyHotelAuditor landing page at phone width"></figure>
+          </div>
+          <p class="shot-note">Landing page, guided intake, and the phone layout.</p>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="status live">Live</span><span class="label">Marketing site + guided intake</span></div>
+          <h3 id="case-mha">MyHotelAuditor.com</h3>
+          <p>The storefront for a hotel audit product I founded. A general manager, a sales and marketing director and an asset manager arrive with different problems and different budgets. The site has to sort them quickly and put the right report in front of each.</p>
+          <ul>
+            <li>An eight-step guided intake asks for the visitor's role and blind spots, recommends a report, shows why it fits, and previews a sample before anyone pays.</li>
+            <li>The recommendation engine weights the eight-report catalog by persona: GM, DOSM/DORM, and Owner/Asset Manager.</li>
+            <li>Progress autosaves, so a returning visitor picks up where they left off. A phone-only sticky "Run an Audit" button keeps the main action in reach.</li>
+            <li>One brand token file defines every color. The site respects reduced-motion settings and deploys automatically after tests pass.</li>
+          </ul>
+          <div class="journey">
+            <span class="journey-title">Journey</span>
+            <ol>
+              <li>Role</li>
+              <li>Pain points</li>
+              <li>Recommended report + sample</li>
+              <li>Checkout</li>
+            </ol>
+          </div>
+          <div class="tags"><span>Persona-based UX</span><span>Conversion flow</span><span>Design tokens</span><span>HTML · CSS · JS</span><span>Stripe checkout</span></div>
+          <a class="case-link" href="https://myhotelauditor.com/" target="_blank" rel="noopener">myhotelauditor.com ↗</a>
+        </div>
+      </article>
+
+      <article class="case" aria-labelledby="case-dr">
+        <div class="case-media">
+          <figure class="shot"><img src="assets/img/doubledrook-home.jpg" width="1440" height="900" loading="lazy" alt="Doubled Rook homepage: headline Your property has character, your marketing should too"></figure>
+          <p class="shot-note">Homepage.</p>
+        </div>
+        <div class="case-body">
+          <div class="case-meta"><span class="status live">Live</span><span class="label">Agency site &amp; content hub</span></div>
+          <h3 id="case-dr">doubledrook.com</h3>
+          <p>The website for my hospitality digital agency. It has to win two kinds of visits: hotel owners comparing agencies, and people (and AI assistants) searching for answers to specific marketing problems.</p>
+          <ul>
+            <li>Services, case studies, FAQ and contact on one scannable homepage, with an RFP page that works even with JavaScript turned off.</li>
+            <li>39 long-form Field Notes articles that answer the questions hotel teams actually search for, each linking to the audit tool or the RFP.</li>
+            <li>Structured data (FAQPage, Service, Offer, Person), a sitemap, and an llms.txt file so search engines and AI assistants can read the site and cite it.</li>
+            <li>An earlier version ran separate landing pages for hotels, boutique properties and general businesses, plus a headline variant for A/B testing.</li>
+          </ul>
+          <div class="journey">
+            <span class="journey-title">Journey</span>
+            <ol>
+              <li>Search or AI answer</li>
+              <li>Field Notes article</li>
+              <li>Case study</li>
+              <li>Audit or RFP</li>
+            </ol>
+          </div>
+          <div class="tags"><span>SEO &amp; GEO</span><span>Structured data</span><span>Content strategy</span><span>Writing &amp; editing</span><span>Progressive enhancement</span></div>
+          <a class="case-link" href="https://www.doubledrook.com/" target="_blank" rel="noopener">doubledrook.com ↗</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="also">
+      <p class="also-head label">Also built</p>
+      <article>
+        <h3>Automated campaign audit system · Pinterest</h3>
+        <p>Designed and coded a system that gives performance marketers personalized campaign insights (ROAS, CPA, CTR, drop-off, view-through) against platform benchmarks from Snowflake and BigQuery. It saved sales teams several hours of manual work a week.</p>
+      </article>
+      <article>
+        <h3>A/B and incrementality frameworks · Pinterest</h3>
+        <p>Built the testing frameworks for new ad products, moving teams past last-touch attribution to measure true lift: iROAS, iCPA, brand lift and ad recall.</p>
+      </article>
+      <article>
+        <h3>Hotel website audits · Doubled Rook</h3>
+        <p>70+ audits of luxury, boutique and independent hotel sites, scoring site architecture, Core Web Vitals, WCAG accessibility, GA4 and GTM setup, and how each property shows up on Google and the OTAs.</p>
+      </article>
+      <article>
+        <h3>Ecommerce brand launch · Double Rook Ecommerce</h3>
+        <p>Built an ecommerce brand from the ground up, storefront to paid acquisition. It grossed $500K in its first 45 days and expanded internationally.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="ai" aria-labelledby="ai-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">AI systems · Agents, orchestration, scheduled automation</p>
+      <h2 id="ai-title">I build the AI systems behind the marketing and run them in production.</h2>
+      <p>At Pinterest I built scaled tooling and automations that integrate with GenAI. At Doubled Rook, scheduled prompts and agent workflows now run more than 90% of the business's recurring work, from content production to reporting.</p>
+    </div>
+
+    <div class="ai-feature">
+      <div class="ai-feature-body">
+        <div class="case-meta"><span class="status live">In production</span><span class="label">MyHotelAuditor fulfillment platform</span></div>
+        <h3>An agent pipeline that researches, writes and scores a hotel audit, then waits for a human.</h3>
+        <p>A paid order on the website starts a run. The platform fans out one workflow per report, gathers evidence from the property's own site, official APIs and search, has models analyze it under strict rules, and holds every report for my approval before the buyer sees it.</p>
+        <ul>
+          <li>Durable, queue-driven workflows on Cloudflare run reports in parallel, with retry and re-collect from a QA console.</li>
+          <li>Every AI finding is checked against stored, dated evidence. If it can't be traced, it doesn't ship. Scores are computed by code, not by a model.</li>
+          <li>The console holds the prompt library, a per-report model map, cost estimates per run, and lane policies such as cost ceilings.</li>
+          <li>A daily scheduled job handles data retention; a 60-minute hold gives each buyer a window to change or cancel.</li>
+        </ul>
+      </div>
+      <div class="pipeline-wrap">
+        <p class="journey-title">Pipeline, per report</p>
+        <ol class="pipeline">
+          <li><b>Order</b><span>Signed webhook from Stripe creates the run</span></li>
+          <li><b>Hold</b><span>Scheduled 60-minute window to change or cancel</span></li>
+          <li><b>Capture</b><span>Own site, official APIs, search, with a 24-hour cache</span></li>
+          <li><b>Extract</b><span>One model call per stored page, fidelity-checked</span></li>
+          <li><b>Analyze</b><span>Pinned prompt; findings validated against evidence</span></li>
+          <li><b>Score</b><span>Deterministic rubric in code</span></li>
+          <li><b>Render</b><span>HTML and PDF report version</span></li>
+          <li><b>Approve</b><span>Human QA, then delivery by secure link</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="ai-grid">
+      <article>
+        <p class="label">Scheduled orchestration</p>
+        <h3>Recurring work on a clock</h3>
+        <p>Production scheduled prompts and cron jobs that run without being asked: content production, reporting, retention, and a personal news dashboard that aggregates feeds every hour and emails a digest at 7:30 AM through GitHub Actions and the Gmail API.</p>
+      </article>
+      <article>
+        <p class="label">Agent workflows</p>
+        <h3>Agents with human checkpoints</h3>
+        <p>n8n, Python and MCP workflows that generate, publish and QA content with review steps before anything goes live. Designed hotel agents for review responses, abandoned-booking recovery, front-desk email triage, upsells and multilingual guest messaging.</p>
+      </article>
+      <article>
+        <p class="label">Prompts as product</p>
+        <h3>Versioned, evaluated, retired</h3>
+        <p>A GitHub library of prompts, skills and context files, documented and versioned like code. Each workflow has evaluation criteria and adoption tracking; what underperforms gets retired and what works becomes a reusable template.</p>
+      </article>
+      <article>
+        <p class="label">Local and frontier models</p>
+        <h3>My own model lab</h3>
+        <p>Open-weight models (Qwen, MiniMax, Kimi, DeepSeek, Gemma) on an RTX 5090 and a Mac Studio Ultra, driven through harnesses like OpenClaw and Hermes. Frontier models run on an always-on Mac mini for jobs that never stop.</p>
+      </article>
+      <article>
+        <p class="label">Generative media</p>
+        <h3>Video and imagery through MCP</h3>
+        <p>Automated video production and editing with Higgsfield over MCP. The MyHotelAuditor product film and its animated mascot were produced this way.</p>
+      </article>
+      <article>
+        <p class="label">Agent-ready websites</p>
+        <h3>Sites AI assistants can use</h3>
+        <p>doubledrook.com publishes an llms.txt that tells AI agents how to submit an RFP for their user, plus structured data that helps assistants quote and cite the site.</p>
+      </article>
+    </div>
+
+    <p class="stack"><span class="label">Daily stack</span> Claude (Max) and Claude Code · ChatGPT · Gemini · Higgsfield Pro · Replit Agent · n8n · MCP servers · OpenRouter · Python · Cloudflare Workers, Workflows and Queues · GitHub Actions</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="approach" aria-labelledby="approach-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Approach</p>
+      <h2 id="approach-title">How I take a page from request to result.</h2>
+      <p>The same four steps run every project above, whether the request comes from product marketing, recruiting or the communications team.</p>
+    </div>
+    <ol class="process">
+      <li>
+        <h3>Name the audience and the action</h3>
+        <p>Who is this page for, what do they already know, and what should they do next? One page, one primary action.</p>
+      </li>
+      <li>
+        <h3>Structure the journey</h3>
+        <p>Navigation, page flow and content hierarchy, drafted as an outline and a quick AI-assisted prototype before design time is spent.</p>
+      </li>
+      <li>
+        <h3>Build and QA with partners</h3>
+        <p>Produce in the CMS or brief the agency with a clear spec. Check copy, links, accessibility, performance and tracking before anything publishes.</p>
+      </li>
+      <li>
+        <h3>Measure and improve</h3>
+        <p>GA4 and GTM events on the actions that matter, A/B tests where traffic allows, and a regular review of where people drop off.</p>
+      </li>
+    </ol>
+
+    <div class="audiences">
+      <div class="audiences-intro">
+        <p class="label">Applied to shield.ai</p>
+        <h3>Where I would start</h3>
+        <p>Shield AI's site serves at least five audiences named in this role. My first pass would map each one to the content it needs and the single action it should take, then audit the current pages against that map.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th scope="col">Audience</th><th scope="col">What they need to see</th><th scope="col">Next step</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Customers</td><td>What Hivemind, V-BAT, X-BAT and Aechelon do, proven in operations, organized by mission</td><td class="muted">Talk to the team</td></tr>
+            <tr><td>Partners</td><td>How Hivemind integrates with their platforms and what a partnership looks like</td><td class="muted">Partnership inquiry</td></tr>
+            <tr><td>Policymakers</td><td>The mission, the impact on service members and civilians, and a clear point of contact</td><td class="muted">Request a briefing</td></tr>
+            <tr><td>Recruits</td><td>Teams, locations, culture, and open roles that are easy to filter</td><td class="muted">Apply</td></tr>
+            <tr><td>Media</td><td>Recent news, approved facts, imagery and a press contact in one place</td><td class="muted">Press inquiry</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="experience" aria-labelledby="experience-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Experience</p>
+      <h2 id="experience-title">Where I've worked.</h2>
+    </div>
+
+    <div class="ledger">
+      <article class="role">
+        <div class="role-when"><span class="dates">Feb 2026 – Present</span><span class="label">San Diego, CA</span></div>
+        <div class="role-what">
+          <h3>Doubled Rook &amp; MyHotelAuditor.com</h3>
+          <p class="title">Founder</p>
+          <ul>
+            <li>Own client web presence end to end: site architecture, page production, measurement, conversion optimization and AI-assisted content operations for hotels and resorts.</li>
+            <li>Designed and built doubledrook.com, MyHotelAuditor.com and audience-specific microsites for hotel clients.</li>
+            <li>Built MyHotelAuditor's fulfillment platform: evidence-graded audit reports produced by an orchestrated agent pipeline with human approval.</li>
+            <li>Run 90%+ of the business's recurring work on scheduled prompts and agent workflows (n8n, MCP, Python, Claude, Gemini, ChatGPT and local models).</li>
+            <li>Produced 70+ website audits covering UX, Core Web Vitals, WCAG accessibility, GA4/GTM and SEO, and direct external vendors from spec through QA and sign-off.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role-when"><span class="dates">Jul 2021 – Feb 2026</span><span class="label">Remote</span></div>
+        <div class="role-what">
+          <h3>Pinterest</h3>
+          <p class="title">Global Measurement Lead, Scaled Programs · Jan 2023 – Feb 2026</p>
+          <p class="title">Global Measurement Lead, Scale · Jul 2021 – Jan 2023</p>
+          <ul>
+            <li>Hired to build out Pinterest's SMB measurement capabilities, including scaled tooling, playbooks and automations that integrate with GenAI.</li>
+            <li>Architected and coded an automated campaign audit system that delivers personalized insights against platform benchmarks (Snowflake, BigQuery) and saves sales teams several hours of manual work each week.</li>
+            <li>Partnered with Product and Product Marketing to bring new ad products to market and owned go-to-market readiness across measurement teams.</li>
+            <li>Designed A/B and incrementality testing frameworks for new ad products.</li>
+            <li>Wrote Pinterest's official Measurement Point of View, aligning Sales, Product and Marketing on one source of truth.</li>
+            <li>Built and taught the curriculum that standardized campaign design, naming conventions and reporting across teams.</li>
+            <li>Won the 2022 Makeathon Money Maker Award: proved the concept, built a working demo and produced a promo video in 72 hours. It was added to the 2023 product roadmap.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role-when"><span class="dates">Jan 2021 – Jul 2021</span><span class="label">San Diego, CA</span></div>
+        <div class="role-what">
+          <h3>Raindrop Marketing</h3>
+          <p class="title">Senior Paid Media Manager</p>
+          <ul>
+            <li>Audited client websites for CRO, SEO, tag implementation (GTM) and analytics hygiene, and directed site and creative changes from the data.</li>
+            <li>Wrote the team's SOPs for naming, testing methodology, QA and reporting across a five-brand portfolio.</li>
+            <li>Scaled spend 61% while holding blended ROAS and growing revenue 52%. Fast-tracked to Associate Director within four months.</li>
+            <li>Led strategy calls with brands and directed creative from media metrics in Shopify and Google Analytics.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role-when"><span class="dates">Mar 2020 – Feb 2021</span><span class="label">San Diego, CA</span></div>
+        <div class="role-what">
+          <h3>Double Rook Ecommerce</h3>
+          <p class="title">Founder</p>
+          <ul>
+            <li>Built an ecommerce brand from the ground up that grossed $500K in 45 days and expanded internationally.</li>
+            <li>Helped SMB clients scale through paid acquisition on Facebook, Instagram, Google, Pinterest and YouTube.</li>
+            <li>Ran product research, pricing, vendor relationships and customer support.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role-when"><span class="dates">Jul 2020 – Dec 2020</span><span class="label">San Diego, CA</span></div>
+        <div class="role-what">
+          <h3>Zeno Gym</h3>
+          <p class="title">Director of Digital Marketing</p>
+          <ul>
+            <li>Owned and maintained Shopify storefronts for two brands, including SEO, custom code and conversion-rate optimization.</li>
+            <li>Brought paid media in-house and cut total marketing spend 33% while holding revenue.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role-when"><span class="dates">Jan 2017 – Apr 2020</span><span class="label">San Clemente, CA</span></div>
+        <div class="role-what">
+          <h3>Evolution Hospitality <span class="label">(acquired by Aimbridge Hospitality)</span></h3>
+          <p class="title">Ecommerce Manager</p>
+          <ul>
+            <li>Owned digital marketing and web performance for 15+ branded, soft-branded and independent hotels, working within Marriott, Hilton and IHG brand-compliance and approval workflows.</li>
+            <li>Grew website-generated revenue 55% YoY across five independent hotels ($10M+ topline) and lifted direct-website conversion rate 24% YoY.</li>
+            <li>Built and pitched $3M+ in annual budget across paid media, content and web, aligning creative, web and media stakeholders across properties.</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="edu">
+        <span><strong>University of California, Riverside</strong> · B.A., Economics Administration, emphasis in Information Technology Management</span>
+        <span class="label">2015</span>
+      </div>
+      <div class="edu">
+        <span><strong>Dataquest</strong> · Introduction to Python Programming (2022) · Filtering and Sorting Data in SQL (2021)</span>
+        <span class="label">Certifications</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="references" aria-labelledby="references-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Recommendations · LinkedIn</p>
+      <h2 id="references-title">What the people I worked with say.</h2>
+    </div>
+    <div class="quotes">
+      <figure class="quote">
+        <blockquote>
+          <p>“Michael led the development of tools and narratives that helped advertisers optimise towards site analytics outcomes (particularly Google Analytics and Adobe Analytics) on Pinterest… He also played a key role in supporting our Product and PMM teams, helping assess multiple ad products to understand their efficacy in driving incremental outcomes for advertisers.”</p>
+          <p>“Michael is hard-working, endlessly curious, and a genuine culture driver—someone who makes the people around him better.”</p>
+        </blockquote>
+        <figcaption><strong>Patrick Kennedy</strong><span>Global Head of Scaled Measurement, Pinterest · managed Michael directly</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>
+          <p>“Michael and I worked closely to bring a new product to market. As my go-to measurement lead, I consistently relied on his deep expertise and judgment. He brings clarity to ambiguity, takes true end-to-end ownership, and partners seamlessly across functions to translate strategic goals into actionable plans that supported a successful launch.”</p>
+        </blockquote>
+        <figcaption><strong>Annie Ngo</strong><span>Product Marketing, Pinterest · worked with Michael on the same team</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="fit" aria-labelledby="fit-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Fit · Req. R6101</p>
+      <h2 id="fit-title">The role's requirements, and where I've done each one.</h2>
+    </div>
+    <div class="table-scroll">
+      <table class="fit">
+        <thead>
+          <tr><th scope="col">From the job description</th><th scope="col">Evidence</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>4+ years in web experience, web production or UX/content strategy<span class="tier">Required</span></td><td>10+ years owning hotel, ecommerce and agency websites at Evolution Hospitality, Zeno Gym, Raindrop and Doubled Rook.</td></tr>
+          <tr><td>Strong UX judgment for multiple audience personas<span class="tier">Required</span></td><td>Sheraton Park microsite with a page per group buyer; MyHotelAuditor intake that routes GMs, sales directors and owners to different recommendations.</td></tr>
+          <tr><td>WordPress or a comparable CMS<span class="tier">Required</span></td><td>Shopify storefronts for two brands; 15+ hotel sites published through brand CMS and approval workflows; WordPress and headless Sanity builds for Doubled Rook clients.</td></tr>
+          <tr><td>Basic HTML, CSS, design systems or front-end workflows<span class="tier">Required</span></td><td>Hand-built doubledrook.com and MyHotelAuditor.com in HTML, CSS and JavaScript, with a single brand token file and automated deploys.</td></tr>
+          <tr><td>Comfort with AI-enabled tools for design, content and prototyping<span class="tier">Required</span></td><td>All three 2026 sites were prototyped and built with AI-assisted workflows. I run an orchestrated agent pipeline in production, scheduled prompts that handle 90%+ of recurring work, and n8n, Python and MCP workflows for content generation, publishing and QA. <a href="#ai">See AI systems</a>.</td></tr>
+          <tr><td>Building pages with designers, developers, agencies and stakeholders<span class="tier">Required</span></td><td>Directed external vendors from spec to sign-off at Doubled Rook; aligned creative, web and media stakeholders across 15+ properties at Evolution.</td></tr>
+          <tr><td>Page hierarchy, SEO, accessibility and conversion optimization<span class="tier">Required</span></td><td>70+ audits covering Core Web Vitals, WCAG, GA4/GTM and SEO; structured data and llms.txt on doubledrook.com; +24% YoY direct-site conversion rate.</td></tr>
+          <tr><td>Project management across many updates, launches and requests<span class="tier">Required</span></td><td>Ran a five-brand portfolio at Raindrop; launched three sites and a production platform in 2026; won a 72-hour Makeathon with a demo that reached the product roadmap.</td></tr>
+          <tr><td>Writing, editing and content organization<span class="tier">Required</span></td><td>39 published Field Notes articles; wrote Pinterest's official Measurement Point of View and the curriculum used to train teams.</td></tr>
+          <tr><td>Analytics, A/B testing and performance reporting<span class="tier">Preferred</span></td><td>Built A/B and incrementality frameworks at Pinterest; GA4 event taxonomy and GTM setup on every site I run.</td></tr>
+          <tr><td>Web agencies or external development partners<span class="tier">Preferred</span></td><td>Managed agency and vendor partners as a client at Evolution and Zeno Gym, and as the agency at Raindrop and Doubled Rook.</td></tr>
+          <tr><td>Advanced technology or B2B technology<span class="tier">Preferred</span></td><td>Nearly five years at Pinterest building measurement tooling for advertisers and bringing new ad products to market with Product Marketing; founded and built a B2B SaaS audit product.</td></tr>
+          <tr><td>Based in San Mateo, San Diego, Dallas or Washington, DC<span class="tier">Location</span></td><td>Based in San Diego and ready for a hybrid schedule.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="toolkit">
+      <div>
+        <p class="label">Web &amp; CMS</p>
+        <p>WordPress, Shopify, Sanity (headless), HTML, CSS, JavaScript, design tokens, Cloudflare, GitHub</p>
+      </div>
+      <div>
+        <p class="label">Analytics &amp; testing</p>
+        <p>GA4 event taxonomy, Google Tag Manager, A/B and incrementality testing, BigQuery, Snowflake, SQL</p>
+      </div>
+      <div>
+        <p class="label">SEO &amp; quality</p>
+        <p>Technical SEO, structured data, generative engine optimization, Core Web Vitals, WCAG accessibility</p>
+      </div>
+      <div>
+        <p class="label">AI workflows</p>
+        <p>Agents and scheduled workflows, n8n, MCP servers, Claude Code, OpenRouter, local open-weight models, versioned prompt libraries with evals</p>
+      </div>
+      <div>
+        <p class="label">Ways of working</p>
+        <p>Stakeholder intake, specs and briefs, agency management, SOPs, QA checklists, team training</p>
+      </div>
+      <div>
+        <p class="label">Growth channels</p>
+        <p>Conversion-rate optimization, landing pages, paid search and social, email and lifecycle</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <p class="label">Contact</p>
+        <h2 id="contact-title">Let's talk about shield.ai.</h2>
+      </div>
+      <div class="contact-list">
+        <div class="contact-row">
+          <span class="label">Email</span>
+          <span><a id="email" href="mailto:mgome028@gmail.com">mgome028@gmail.com</a></span>
+          <button class="copy" type="button" id="copy-email" data-copy="mgome028@gmail.com">Copy</button>
+        </div>
+        <div class="contact-row">
+          <span class="label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/mgome028" target="_blank" rel="noopener">linkedin.com/in/mgome028 ↗</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">GitHub</span>
+          <a href="https://github.com/syb-code" target="_blank" rel="noopener">github.com/syb-code ↗</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">Location</span>
+          <span class="val">San Diego, CA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer wrap">
+  <p>© 2026 Michael Gomez</p>
+  <p>Plain HTML and CSS, built with an AI-assisted workflow.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1800); };
+      var fallback = function () {
+        var el = document.getElementById('email');
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        btn.textContent = 'Selected';
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+  });
+</script>
+</body>
+</html>
